@@ -1,9 +1,20 @@
+const div = dom.find("#test>.red")[0];
 
+dom.style(div, "color", "red");
 
-const div = dom.find('#test>.red')[0]
+const divList = dom.find(".red");
 
-dom.style(div, 'color', 'red')
+// dom.each(divList, (n) => console.log(n));
 
-const divList = dom.find('.red')
+const insert = dom.create("     <div>          inert</div>");
 
-dom.each(divList, (n) => console.log(n))
+// dom.before(div, insert);
+// dom.after(div, insert);
+
+dom.wrap(div, insert);
+
+const emptyUl = dom.find(".empty>ul")[0];
+// dom.empty(emptyUl);
+
+const fi = dom.find(".fir")[0];
+console.log(dom.next(fi));
